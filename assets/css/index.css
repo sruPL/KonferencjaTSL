@@ -63,7 +63,7 @@
         }
 
         nav li {
-            margin-left: 25px;
+            margin-left: 18px;
         }
 
         nav a {
@@ -74,6 +74,7 @@
             position: relative;
             padding: 5px 0;
             font-size: 1.1rem;
+            white-space: nowrap;
         }
 
         nav a:hover {
@@ -99,6 +100,42 @@
         nav a:hover::after,
         nav a.active::after {
             width: 100%;
+        }
+
+        nav a.nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(255,107,53,0.22);
+        }
+
+        nav a.nav-cta:hover {
+            background: #e85a28;
+            color: white;
+        }
+
+        nav a.nav-cta::after {
+            display: none;
+        }
+
+        @media (max-width: 1320px) and (min-width: 769px) {
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            nav li {
+                margin-left: 12px;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            nav a.nav-cta {
+                padding: 7px 10px;
+            }
         }
 
         .mobile-menu-btn {
@@ -387,13 +424,32 @@
             margin-bottom: 10px;
         }
 
+        .partner-card {
+            min-height: 300px;
+            padding-bottom: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .partner-card h3 {
+            min-height: 52px;
+            margin-top: auto;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.25;
+        }
+
         .partner-logo {
             width: 100%;
             max-width: 320px;
-            height: 170px;
+            height: 180px;
             background: none;
             border-radius: 0;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             padding: 6px;
             overflow: visible;
         }
@@ -421,8 +477,20 @@
         }
 
         .partner-logo-tall {
-            height: 210px;
-            margin-bottom: 28px;
+            height: 180px;
+            margin-bottom: 18px;
+        }
+
+        .partner-logo-slupsk {
+            height: 180px;
+            margin-bottom: 18px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo-slupsk img {
+            width: 92%;
+            height: auto;
         }
 
         .partner-logo-wide {
