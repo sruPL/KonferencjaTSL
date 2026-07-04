@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Słupskie Dni Techniki, Transportu i Logistyki 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005b96;
+            --secondary: #00a1e0;
+            --accent: #ff6b35;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            position: sticky;
+            top极速飞艇开奖结果官网;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 25px;
+        }
+        
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+            font-size: 1.1rem;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://d-art.ppstatic.pl/kadry/k/r/1/30/7f/569df5b600bab_o_xlarge.jpg') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .hero-dates {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Main content sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .info-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        
+        .info-card ul {
+            padding-left: 20px;
+            margin-top: 15px;
+极速飞艇开奖结果官网
+        }
+        
+        .info-card li {
+            margin-bottom: 8px;
+        }
+        
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .icon-container i {
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        /* Program section */
+        .program-section {
+            background-color: #f5f7fa;
+        }
+        
+        .schedule {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .schedule-item {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+        }
+        
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+        
+        .time {
+            min-width: 120px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .event-details h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .event-details p {
+            color: var(--gray);
+        }
+        
+        /* Organizers section */
+        .organizers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .organizer-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .organizer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .organizer-logo {
+            width: 100px;
+            height: 100px;
+            background: #f0f4f8;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .organizer-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .contact-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        
+        .email-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .email-link:hover {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.3极速飞艇开奖结果官网;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Map styles */
+        .map-container {
+            margin-top: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Program list improvements */
+        .presentation-list {
+            margin-top: 10px;
+        }
+        
+        .presentation-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .presentation-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .presenter {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .organization {
+            font-style: italic;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+            .hero {
+                height: 60vh;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+            }
+            
+            .time {
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-dates {
+                font-size: 1rem;
+            }
+        }
+
+        /* --- NADPISANIE: mniejszy odstęp tylko dla sekcji O Konferencji --- */
+        #about.section { padding: 30px 0; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-train fa-2x" style="color: var(--primary);"></i>
+                <div class="logo-text">SDTTiL <span>2025</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> O Konferencji</a></li>
+                    <li><a href="#program"><i class="fas fa-calendar-alt"></i> Program</a></li>
+                    <li><a href="#organizers"><i class="fas fa-users"></i> Organizatorzy</a></li>
+					<li><a href="wnioski.html"><i class="fas fa-file-alt"></i> Wnioski</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero" 
+    style="
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                   url('../img/hero/hero-image.jpg') center/cover no-repeat;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    ">
+    <div class="hero-content" 
+        style="
+            position: relative;
+            z-index: 1;
+            padding: 28px;
+            max-width: 680px;
+            border-radius: 8px;
+            text-align: center;
+        ">
+        <h1 style="font-size: 2.8rem; margin-bottom: 0.6rem; line-height: 1.3; color: white;">
+            Słupskie Dni Techniki,<br>Transportu i Logistyki
+        </h1>
+        <p style="font-size: 1.4rem; margin-bottom: 1.1rem; color: white; line-height: 1.4;">
+            Inwestycje i rozwój systemu<br>transportowego Pomorza
+        </p>
+        <div class="hero-dates" style="font-size: 1.15rem; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 1.1rem; color: white;">
+            <i class="fas fa-calendar-alt"></i> 25 listopada 2025 | Aula Uniwersytecka, Słupsk
+        </div>
+        <a href="https://forms.gle/tsH47VgpWUe9oHx67" target="_blank" rel="noopener noreferrer" class="btn" style="
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        ">Zapisz się na konferencję</a>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Konferencji</h2>
+            </div>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="icon-container">
+                        <i class="fas fa-bullseye"></i> <!-- Poprawiona ikona -->
+                    </div>
+                    <h3>Cel Konferencji</h3>
+                    <p>Prezentacja realizowanych i planowanych inwestycji w infrastrukturę transportową regionu Słupska oraz wskazanie roli inwestycji jako narzędzia pobudzania rozwoju społeczno-gospodarczego.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon-container">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Termin i Miejsce</h3>
+                    <p><strong>25 listopada 2025</strong><br>
+                    Konferencja: "Inwestycje i rozwój systemu transportowego Pomorza"</p>
+                    <p><strong>Aula Uniwersytecka</strong><br>
+                    ul. Kozietulskiego 7, Słupsk</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon-container">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Forma Konferencji</h3>
+                    <p>Konferencja odbędzie się w formie hybrydowej:</极速飞艇开奖结果官网>
+                    <ul>
+                        <li>Stacjonarnie w Auli Uniwersyteckiej</li>
+                        <li>Online z transmisją na żywo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+<section class="section program-section" id="program">
+    <div class="container">
+        <div class="section-title">
+            <h2>Program Konferencji</h2>
+        </div>
+
+        <div class="schedule">
+
+            <!-- Otwarcie konferencji -->
+            <div class="schedule-item">
+                <div class="time">09:00</div>
+                <div class="event-details">
+                    <h3>Otwarcie konferencji</h3>
+                    <p>Powitanie uczestników i rozpoczęcie obrad</p>
+                    <div class="presentation-list">
+                        <div class="presentation-item">
+                            <span class="organization">Wykład plenarny: Rola środków Unii Europejskiej w zakresie rozwoju infrastruktury transportowej Pomorza</span>
+                        </div>
+                        <div class="presentation-item">
+                            <span class="presenter">Przedstawiciel Centrum Unijnych Projektów Transportowych</span>
+                        </div>
+                        <div class="presentation-item">
+                            <span class="presenter">Przedstawiciel Centrum Projektów Polska Cyfrowa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 1 -->
+            <div class="schedule-item">
+                <div class="time">10:00 - 11:20</div>
+                <div class="event-details">
+                    <h3>Panel 1: Diagnoza i perspektywy rozwojowe infrastruktury kolejowej Pomorza</h3>
+                    <div class="presentation-list">
+                        <div class="presentation-item">
+                            „Rozwój i integracja transportu publicznego w województwie pomorskim” – 
+                            <span class="presenter">Krzysztof Czopek</span>, 
+                            <span class="organization">Dyrektor Departamentu Infrastruktury Urzędu Marszałkowskiego Województwa Pomorskiego</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Przerwa kawowa -->
+            <div class="schedule-item">
+                <div class="time">11:30 - 11:50</div>
+                <div class="event-details">
+                    <h3>Przerwa kawowa</h3>
+                </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="schedule-item">
+                <div class="time">12:00 - 13:30</div>
+                <div class="event-details">
+                    <h3>Panel 2: Znaczenie infrastruktury drogowej w kształtowaniu powiązań funkcjonalnych Pomorza – diagnoza i perspektywy rozwojowe</h3>
+                    <div class="presentation-list">
+                        <div class="presentation-item">
+                            „Zadania inwestycyjne realizowane przez GDDKiA Szczecin w kształtowaniu powiązań Pomorza” – 
+                            <span class="presenter">Łukasz Lendner</span>, 
+                            <span class="organization">Dyrektor Oddziału Szczecin Generalna Dyrekcja Dróg Krajowych i Autostrad</span>
+                        </div>
+                        <div class="presentation-item">
+                            „Zadania inwestycyjne realizowane przez GDDKiA Gdańsk w kształtowaniu powiązań Pomorza” – 
+                            <span class="presenter">Karol Markowski</span>, 
+                            <span class="organization">Dyrektor Oddziału Gdańsk Generalna Dyrekcja Dróg Krajowych i Autostrad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3 - POPRAWIONY BRAKUJĄCY BULLET -->
+            <div class="schedule-item">
+                <div class="time">13:30 - 14:40</div>
+                <div class="event-details">
+                    <h3>Panel 3: Rola telematyki w zarządzaniu transportem zbiorowym</h3>
+                    <div class="presentation-list">
+                        <div class="presentation-item"> <!-- Poprawiona klasa -->
+                            <span class="presenter">Bolesław Hilarecki</span> – 
+                            <span class="organization">Prezes Zarządu MP Technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zakończenie konferencji -->
+            <div class="schedule-item">
+                <div class="time">14:45</div>
+                <div class="event-details">
+                    <h3>Zakończenie konferencji</h3>
+                </div>
+            </div>
+
+            <!-- Lunch -->
+            <div class="schedule-item">
+                <div class="time">15:00 - 15:30</div>
+                <div class="event-details">
+                    <h3>Lunch</h3>
+                </div>
+            </div>
+
+            <!-- Gala -->
+            <div class="schedule-item">
+                <div class="time">15:30</div>
+                <div class="event-details">
+                    <h3>Gala Słupskich Dni Logistyki</h3>
+                    <p>Wręczenie nagród Złoty Kompas Logistyki</p>
+                </div>
+            </div>
+
+            <!-- Koncert -->
+            <div class="schedule-item">
+                <div class="time">16:20</div>
+                <div class="event-details">
+                    <h3>Wystąpienie / Koncert</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Organizers Section -->
+    <section class="section" id="organizers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Organizatorzy</h2>
+            </div>
+            
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <div class="organizer-logo" style="background: none;">
+                        <img src="../img/logos/sitk-rp-o-slupsk.jpg" alt="SITK RP O/Słupsk" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+                    </div>
+                    <h3>SITK RP O/Słupsk</h3>
+                </div>
+
+                <div class="organizer-card">
+                    <div class="organizer-logo" style="background: none;">
+                        <img src="../img/logos/logo-not.png" alt="FSN极速飞艇开奖结果官网 NOT w Słupsku" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+                    </div>
+                    <h3>FSNT NOT w Słupsku</h3>
+                </div>
+
+                <div class="organizer-card">
+                    <div class="organizer-logo" style="background: none;">
+                        <img src="../img/logos/instytut-zarzadzania-upsl.jpg" alt="Instytut Zarządzania Uniwersytetu Pomorskiego w Słupsku" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+                    </div>
+                    <h3>Uniwersytet Pomorski w Słupsku</h3>
+                    <p>Instytut Zarządzania</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Kontakt</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Miejsce konferencji</h3>
+                    <div class="contact-info">
+                        Aula Uniwersytecka<br>
+                        ul. Kozietulskiego 7<br>
+                        76-200 Słupsk
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Koordynator</h3>
+                    <div class="contact-info">
+                        dr Tomasz Adamkiewicz<br>
+                        <a href="mailto:tomasz.adamkiewicz@upsl.edu.pl" class="email-link">tomasz.adamkiewicz@upsl.edu.pl</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Sekretarz</h3>
+                    <div class="contact-info">
+                        mgr Lina Bogdanowa<br>
+                        <a href="mailto:lina.bogdanowa@upsl.edu.pl" class="email-link">lina.bogdanowa@upsl.edu.pl</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2318.717404892391!2d17.0212670767512!3d54.460568471995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4701d9d2a8b97d0f%3A0x24e3a1a9d9d0b0a!2sKozietulskiego%207%2C%20S%C5%82upsk!5e0!3m2!1spl!2spl!4v1650000000000!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>SDTTiL 2025</h3>
+                    <p>Słupskie Dni Techniki, Transportu i Logistyki</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Nawigacja</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">O Konferencji</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#organizers">Organizatorzy</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Dane Kontaktowe</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> tomasz.adamkiewicz@upsl.edu.pl</li>
+                        <li><i class="fas fa-envelope"></i> lina.bogdanowa@upsl.edu.pl</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 76-200 Słupsk, ul. Kozietulskiego 7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Słupskie Dni Techniki, Transportu i Logistyki. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (document.getElementById('navMenu').classList.contains('show')) {
+                    document.getElementById('navMenu').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
