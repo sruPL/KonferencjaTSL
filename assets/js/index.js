@@ -3,6 +3,18 @@
             document.getElementById('navMenu').classList.toggle('show');
         });
 
+        function scrollToSection(targetElement) {
+            const header = document.querySelector('header');
+            const headerOffset = header ? header.offsetHeight : 0;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 15; // Dodatkowy margines 15px
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -12,15 +24,7 @@
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    const header = document.querySelector('header');
-                    const headerOffset = header ? header.offsetHeight : 0;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 15; // Dodatkowy margines 15px
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    scrollToSection(targetElement);
                 }
 
                 // Close mobile menu if open
@@ -36,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const el = document.getElementById(scrollTarget);
             if (el) {
               setTimeout(() => {
-                el.scrollIntoView({ behavior: "smooth" });
+                scrollToSection(el);
               }, 300);
             }
             localStorage.removeItem("scrollTarget");
