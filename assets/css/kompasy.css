@@ -242,6 +242,8 @@
             color: var(--gray);
             margin-bottom: 15px;
             flex-grow: 1;
+            text-align: justify;
+            text-align-last: left;
         }
 
         .card-footer {
