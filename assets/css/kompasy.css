@@ -345,3 +345,41 @@
                 font-size: 2rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 0;
+                padding: 28px 0;
+                background-position: center center;
+            }
+
+            .hero-content {
+                width: calc(100% - 28px);
+                padding: 16px 14px;
+            }
+
+            .hero-highlight {
+                width: 100%;
+                justify-content: center;
+                gap: 6px;
+                padding: 8px 10px;
+                margin-bottom: 0.9rem;
+                box-sizing: border-box;
+            }
+
+            .hero-highlight h1 {
+                font-size: clamp(1.2rem, 5.7vw, 1.65rem);
+                line-height: 1.18;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+                line-height: 1.45;
+                margin-bottom: 0.65rem;
+            }
+
+            .hero-description {
+                text-align: left;
+            }
+        }

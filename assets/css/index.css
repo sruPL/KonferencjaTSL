@@ -297,6 +297,15 @@
             margin-top: 30px;
         }
 
+        .partners-title {
+            margin-top: 50px;
+        }
+
+        .partners-grid {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Patrons section override to a 2x2 grid on larger screens */
         @media (min-width: 769px) {
             #patrons .organizers-grid,
@@ -376,6 +385,54 @@
         .organizer-card h3 {
             color: var(--primary);
             margin-bottom: 10px;
+        }
+
+        .partner-logo {
+            width: 100%;
+            max-width: 320px;
+            height: 170px;
+            background: none;
+            border-radius: 0;
+            margin-bottom: 20px;
+            padding: 6px;
+            overflow: visible;
+        }
+
+        .partner-logo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 0;
+        }
+
+        .partner-logo-blue {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            padding: 14px;
+        }
+
+        .partner-logo-tall img {
+            width: auto;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        .partner-logo-tall {
+            height: 210px;
+            margin-bottom: 28px;
+        }
+
+        .partner-logo-wide {
+            max-width: 360px;
+        }
+
+        .partner-logo-wide img {
+            width: 115%;
+            height: auto;
+            max-width: none;
         }
 
         /* Contact section */
@@ -619,7 +676,14 @@
             .info-cards,
             .organizers-grid,
             .contact-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .contact-card {
+                min-width: 0;
+                max-width: 100%;
+                padding: 24px 16px;
+                overflow-wrap: anywhere;
             }
         }
 
@@ -668,5 +732,47 @@
             .hero-conferences {
                 grid-template-columns: 1fr;
                 gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto !important;
+                min-height: 0;
+                align-items: center !important;
+                padding: 28px 0 !important;
+                background-position: center center !important;
+            }
+
+            .hero-content {
+                width: calc(100% - 28px) !important;
+                padding: 18px 14px !important;
+            }
+
+            .hero-conferences {
+                gap: 16px;
+                margin-bottom: 0.9rem;
+            }
+
+            .hero-conference h1 {
+                font-size: clamp(1.35rem, 7vw, 1.9rem) !important;
+                line-height: 1.16 !important;
+                margin-bottom: 0.35rem !important;
+            }
+
+            .hero-conference p {
+                font-size: clamp(0.88rem, 3.6vw, 1rem) !important;
+                line-height: 1.32 !important;
+            }
+
+            .hero-dates {
+                width: auto !important;
+                max-width: 100%;
+                padding: 8px 12px !important;
+                font-size: 0.92rem !important;
+                line-height: 1.35;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 0.9rem !important;
             }
         }
