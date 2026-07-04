@@ -150,7 +150,7 @@
         /* Hero section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('https://d-art.ppstatic.pl/kadry/k/r/1/30/7f/569df5b600bab_o_xlarge.jpg') center/cover no-repeat;
+                        url('../img/hero/hero-image.jpg') center/cover no-repeat;
             height: 70vh;
             display: flex;
             align-items: center;
