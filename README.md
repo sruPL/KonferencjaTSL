@@ -28,27 +28,7 @@ Na podstronie `kompasy/index.html` linki do dokumentów konkursowych są obecnie
 - `assets/docs/kompasy/wniosek-zloty-kompas-edukacji.docx`
 - `assets/docs/kompasy/regulamin-zloty-kompas-biznesu-i-edukacji.docx`
 
-## Deploy
-
-Deploy uruchamia GitHub Actions po pushu na `main`.
-
-```powershell
-git status
-git add -A
-git commit -m "Opis zmian"
-git push origin main
-```
-
-Po deployu warto sprawdzić:
-
-- `https://www.konferencjatsl.pl/`
-- `https://www.konferencjatsl.pl/kompasy/`
-
-Jeśli Cloudflare pokazuje starą wersję, można użyć `Caching -> Purge Cache -> Purge Everything`.
-
 ## Uwaga przy zmianach
 
-- Nie usuwaj `CNAME`, `index.html`, `.github/` ani folderu `kompasy/`.
 - Przy przenoszeniu plików zawsze popraw ścieżki w HTML/CSS.
 - Linki zewnętrzne otwierane w nowej karcie powinny mieć `rel="noopener noreferrer"`.
-- Strona jest statyczna, bez backendu i bazy danych.
