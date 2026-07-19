@@ -345,10 +345,16 @@
 
         /* Patrons section override to a 2x2 grid on larger screens */
         @media (min-width: 769px) {
-            #patrons .organizers-grid,
-            #media-patrons .organizers-grid { /* Apply to media patrons as well */
+            #patrons .organizers-grid {
                 grid-template-columns: repeat(2, 1fr);
                 max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #media-patrons .organizers-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1050px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -404,6 +410,15 @@
             max-height: 100%; /* Don't exceed container */
             object-fit: contain; /* Fit without distortion */
             border-radius: 0;
+        }
+
+        /* Polska Izba Kolei: a bit larger than default, with side inset so text is not clipped */
+        .media-logo-izba img {
+            width: 88%;
+            height: auto;
+            max-width: 88%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         /* Placeholder styles */
@@ -814,9 +829,9 @@
         #about.section {
             padding: 30px 0;
         }
-        /* Smaller padding for media patrons section */
-        #media-patrons.section {
-            padding: 30px 0;
+        /* Spacing for media patrons nested under organizers/partners */
+        .media-patrons-block {
+            margin-top: 10px;
         }
 
         /* Tymczasowe ukrycie elementów pozostających w kodzie */
