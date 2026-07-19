@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>II Pomorskie Dni Logistyki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/index.css?v=1">
+    <link rel="stylesheet" href="assets/css/index.css?v=6">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚂</text></svg>">
 </head>
 <body>
@@ -25,9 +25,8 @@
                 <ul id="navMenu">
                     <li><a href="#about"><i class="fas fa-info-circle"></i> O Konferencji</a></li>
                     <li><a href="#program"><i class="fas fa-calendar-alt"></i> Program</a></li>
-                    <li class="temporarily-hidden"><a href="#patrons"><i class="fas fa-shield-alt"></i> Patroni</a></li>
-                    <li class="temporarily-hidden"><a href="#media-patrons"><i class="fas fa-camera"></i> Patroni Medialni</a></li>
                     <li><a href="#organizers"><i class="fas fa-users"></i> Organizatorzy</a></li>
+                    <li><a href="#partners"><i class="fas fa-shield-alt"></i> Partnerzy</a></li>
                     <li><a href="/kompasy/"><i class="fas fa-trophy"></i> Kompasy</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i> Kontakt</a></li>
                     <li><a href="https://forms.gle/BDYKaacbjnpbUKzE9" target="_blank" rel="noopener noreferrer" class="nav-cta"><i class="fas fa-pen-to-square"></i> Zapisz się!</a></li>
@@ -201,36 +200,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Media Patrons Section -->
-    <section class="section temporarily-hidden" id="media-patrons">
-        <div class="container">
-            <div class="section-title">
-                <h2>Patroni Medialni</h2>
-            </div>
-
-            <div class="organizers-grid">
-                <!-- Kurier Kolejowy -->
-                <div class="organizer-card">
-                    <div class="media-logo-container">
-                        <img src="assets/img/logos/kurier-kolejowy-logo.png" alt="Kurier Kolejowy">
-                    </div>
-                    <h3>Kurier Kolejowy</h3>
-                </div>
-
-                <!-- Raport Kolejowy -->
-                <div class="organizer-card">
-                    <div class="media-logo-container">
-                        <img src="assets/img/logos/raport-kolejowy-logo.png" alt="Kurier Kolejowy">
-                    </div>
-                    <h3>Raport Kolejowy</h3>
-                </div>
-            </div>
-        </div>
-            </div>
-        </div>
-    </section>
-    <!-- Organizers Section -->
+<!-- Organizers Section -->
     <section class="section" id="organizers">
         <div class="container"><div class="section-title"><h2>Organizatorzy</h2></div>
             <div class="organizers-grid">
@@ -238,11 +208,43 @@
                 <div class="organizer-card"><div class="organizer-logo" style="background: none;"><img src="assets/img/logos/instytut-zarzadzania-upsl.jpg" alt="Instytut Zarządzania Uniwersytetu Pomorskiego w Słupsku" style="width:100px; height:100px; border-radius:50%; object-fit:cover;"></div><h3>Uniwersytet Pomorski<br>w Słupsku</h3><p>Instytut Zarządzania</p></div>
                 <div class="organizer-card"><div class="organizer-logo" style="background: none;"><img src="assets/img/logos/pipgovpl-logo.jpeg" alt="Państwowa Inspekcja Pracy" style="width:100px; height:100px; border-radius:50%; object-fit:cover;"></div><h3>Państwowa<br>Inspekcja Pracy</h3><p>Oddział Okręgowy w Gdańsku</p></div>
             </div>
-            <div class="section-title partners-title"><h2>Partnerzy</h2></div>
+            <div class="section-title partners-title" id="partners"><h2>Partnerzy</h2></div>
             <div class="organizers-grid partners-grid">
                 <div class="organizer-card partner-card"><div class="organizer-logo partner-logo partner-logo-blue partner-logo-slupsk"><img src="assets/img/partners/miasto-slupsk.svg" alt="Urząd Miejski w Słupsku"></div><h3>Urząd Miejski<br>w Słupsku</h3></div>
                 <div class="organizer-card partner-card"><div class="organizer-logo partner-logo partner-logo-tall partner-logo-blue"><img src="assets/img/partners/miasto-ustka.png" alt="Urząd Miasta Ustka"></div><h3>Urząd Miasta Ustka</h3></div>
                 <div class="organizer-card partner-card"><div class="organizer-logo partner-logo partner-logo-wide"><img src="assets/img/partners/starostwo-slupsk.svg" alt="Starostwo Powiatowe w Słupsku"></div><h3>Starostwo Powiatowe<br>w Słupsku</h3></div>
+            </div>
+            <!-- Media Patrons Section -->
+            <div class="media-patrons-block" id="media-patrons">
+                <div class="section-title partners-title media-patrons-title">
+                    <h2>Patroni Medialni</h2>
+                </div>
+
+                <div class="organizers-grid media-patrons-grid">
+                    <!-- Kurier Kolejowy -->
+                    <div class="organizer-card">
+                        <div class="media-logo-container">
+                            <img src="assets/img/logos/kurier-kolejowy-logo.png" alt="Kurier Kolejowy">
+                        </div>
+                        <h3>Kurier Kolejowy</h3>
+                    </div>
+
+                    <!-- Polska Izba Kolei -->
+                    <div class="organizer-card">
+                        <div class="media-logo-container media-logo-izba">
+                            <img src="assets/img/logos/polska-izba-kolei-logo.png" alt="Polska Izba Kolei">
+                        </div>
+                        <h3>Polska Izba Kolei</h3>
+                    </div>
+
+                    <!-- Raport Kolejowy -->
+                    <div class="organizer-card">
+                        <div class="media-logo-container">
+                            <img src="assets/img/logos/raport-kolejowy-logo.png" alt="Raport Kolejowy">
+                        </div>
+                        <h3>Raport Kolejowy</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -304,12 +306,11 @@
                     <ul class="footer-links footer-nav-links">
                         <li><a href="#about">O Konferencji</a></li>
                         <li><a href="#program">Program</a></li>
-                        <li class="temporarily-hidden"><a href="#patrons">Patroni</a></li>
-                        <li class="temporarily-hidden"><a href="#media-patrons">Patroni Medialni</a></li> <!-- Dodany link -->
                         <li><a href="#organizers">Organizatorzy</a></li>
+                        <li><a href="#partners">Partnerzy</a></li>
                         <li><a href="/kompasy/">Kompasy</a></li>
                         <li><a href="#contact">Kontakt</a></li>
-                        <li><a href="https://forms.gle/BDYKaacbjnpbUKzE9" target="_blank" rel="noopener noreferrer">Zapisz się!</a></li>
+                        <li class="footer-signup"><a class="footer-signup-link" href="https://forms.gle/BDYKaacbjnpbUKzE9" target="_blank" rel="noopener noreferrer">Zapisz się!</a></li>
                     </ul>
                 </div>
 
