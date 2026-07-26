@@ -51,6 +51,8 @@
             font-weight: 700;
             color: var(--primary);
             margin-left: 10px;
+            line-height: 1.25;
+            white-space: nowrap;
         }
 
         .logo-text span {
@@ -60,10 +62,11 @@
         nav ul {
             display: flex;
             list-style: none;
+            gap: 21px;
         }
 
         nav li {
-            margin-left: 18px;
+            margin-left: 0;
         }
 
         nav a {
@@ -125,8 +128,8 @@
                 font-size: 1.2rem;
             }
 
-            nav li {
-                margin-left: 12px;
+            nav ul {
+                gap: 15px;
             }
 
             nav a {
@@ -768,6 +771,10 @@
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
+            }
+
+            .logo-text {
+                white-space: normal;
             }
 
             nav ul {
