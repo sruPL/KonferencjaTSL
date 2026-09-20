@@ -195,7 +195,7 @@
 
         /* Main content sections */
         .section {
-            padding: 60px 0;
+            padding: 30px 0;
         }
 
         .section-title {
@@ -338,7 +338,7 @@
         }
 
         .partners-title {
-            margin-top: 50px;
+            margin-top: 30px;
         }
 
         .partners-grid {
@@ -853,10 +853,6 @@
             }
         }
 
-        /* Smaller spacing for About section */
-        #about.section {
-            padding: 30px 0;
-        }
         /* Spacing for media patrons nested under organizers/partners */
         .media-patrons-block {
             margin-top: 10px;

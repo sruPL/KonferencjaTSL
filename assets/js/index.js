@@ -7,7 +7,7 @@
             const header = document.querySelector('header');
             const headerOffset = header ? header.offsetHeight : 0;
             const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 15; // Dodatkowy margines 15px
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset + 12;
 
             window.scrollTo({
                 top: offsetPosition,
