@@ -356,16 +356,7 @@
             }
 
             #media-patrons .organizers-grid {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 1050px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            /* Gdy są dokładnie 2 partnerzy medialni — wycentruj zamiast zostawiać pustą trzecią kolumnę */
-            #media-patrons .organizers-grid:has(> .organizer-card:nth-child(2):last-child) {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
         }
 
@@ -419,6 +410,15 @@
             max-height: 100%; /* Don't exceed container */
             object-fit: contain; /* Fit without distortion */
             border-radius: 0;
+        }
+
+        /* Szerokie winiety (Głos Pomorza, gp24.pl) */
+        .media-logo-wide img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         /* Polska Izba Kolei: a bit larger than default, with side inset so text is not clipped */
