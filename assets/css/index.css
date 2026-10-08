@@ -329,6 +329,101 @@
             color: var(--gray);
         }
 
+        .event-details p + p {
+            margin-top: 4px;
+        }
+
+        .event-details a {
+            color: var(--primary);
+            overflow-wrap: anywhere;
+        }
+
+        .event-details .presenter {
+            color: var(--primary);
+        }
+
+        .event-details .talk-translation {
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .program-intro {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .program-kicker {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .program-intro h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .program-intro p {
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+        .schedule-day {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 1.15rem;
+            padding: 14px 25px;
+        }
+
+        .schedule-block {
+            background: rgba(0,91,150,0.06);
+            border-left: 4px solid var(--accent);
+            border-bottom: 1px solid #eee;
+            padding: 18px 25px;
+        }
+
+        .schedule-block-sub {
+            background: rgba(0,161,224,0.07);
+            border-left-color: var(--secondary);
+        }
+
+        .schedule-block-label {
+            display: block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .schedule-block h3 {
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+
+        .schedule-block p {
+            color: var(--gray);
+            margin-top: 4px;
+        }
+
+        .schedule-break {
+            background: #fafbfc;
+        }
+
+        .schedule-break .event-details h3 {
+            color: var(--gray);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
         /* Organizers section */
         .organizers-grid {
             display: grid;
