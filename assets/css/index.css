@@ -153,7 +153,7 @@
         /* Hero section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('../img/hero/hero-image.jpg') center/cover no-repeat;
+                        url('../img/hero/hero-image-upscale.jpeg') center/cover no-repeat;
             height: 70vh;
             display: flex;
             align-items: center;
@@ -345,33 +345,6 @@
         .event-details .talk-translation {
             font-style: italic;
             font-size: 0.95rem;
-        }
-
-        .program-intro {
-            max-width: 900px;
-            margin: 0 auto 30px;
-            text-align: center;
-        }
-
-        .program-kicker {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .program-intro h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            line-height: 1.35;
-            margin-bottom: 12px;
-        }
-
-        .program-intro p {
-            color: var(--gray);
-            margin-bottom: 6px;
         }
 
         .schedule-day {
@@ -959,16 +932,55 @@
         /* Hero conferences side-by-side layout */
         .hero-conferences {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 36px;
-            align-items: start;
-            margin-bottom: 1.1rem;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
+            align-items: center;
+            margin-bottom: 1.3rem;
         }
-        .hero-conference { min-width: 0; }
+        .hero-conference {
+            min-width: 0;
+            padding: 0 28px;
+        }
+        .hero-conference + .hero-conference {
+            border-left: 1px solid rgba(255,255,255,0.25);
+        }
+        .hero .hero-conference h1 {
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+        }
+        .hero .hero-conference p {
+            font-size: 1.05rem;
+            max-width: none;
+        }
+        .hero-main-title {
+            margin: 0 auto 1.3rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+        .hero .hero-kicker {
+            color: var(--accent);
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+        .hero .hero-theme {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
         @media (max-width: 900px) {
             .hero-conferences {
                 grid-template-columns: 1fr;
                 gap: 24px;
+            }
+            .hero-conference {
+                padding: 0;
+            }
+            .hero-conference + .hero-conference {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.25);
+                padding-top: 20px;
             }
         }
 
@@ -1000,6 +1012,23 @@
             .hero-conference p {
                 font-size: clamp(0.88rem, 3.6vw, 1rem) !important;
                 line-height: 1.32 !important;
+            }
+
+            .hero-main-title {
+                margin-bottom: 1rem;
+                padding-bottom: 0.9rem;
+            }
+
+            .hero .hero-kicker {
+                font-size: 0.95rem;
+            }
+
+            .desktop-only-br {
+                display: none;
+            }
+
+            .hero .hero-theme {
+                font-size: 1.05rem;
             }
 
             .hero-dates {
