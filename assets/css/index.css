@@ -1066,7 +1066,7 @@
         /* pojedyncza godzina wyśrodkowana na linii półpauz: szerokość = 2 × (2.6em + 0.35em) */
         .time .t-start:only-child { width: 5.9em; text-align: center; }
         /* większy odstęp od treści: kolumna przesunięta w lewo, tekst bez zmian */
-        .schedule-item > .time, .schedule-block-timed > .time { margin-left: -16px; min-width: 136px; }
+        .schedule-item > .time, .schedule-block-timed > .time { margin-left: -8px; min-width: 128px; }
         /* blok "Sesje równoległe" z godziną w kolumnie czasu */
         .schedule-block-timed { display: flex; align-items: center; padding-left: 21px; }
         .schedule-block-timed .time { font-weight: 700; flex: 0 0 auto; }
