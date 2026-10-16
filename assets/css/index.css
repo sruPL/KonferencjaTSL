@@ -1048,7 +1048,7 @@
         #program .section-title h2 { padding-bottom: 0; }
         #program .section-title h2::after { display: none; }
         .schedule-block-label.schedule-block-label-lg {
-            font-size: 1.3rem;
+            font-size: 1.05rem;
             letter-spacing: 0.02em;
             margin-bottom: 0;
         }
