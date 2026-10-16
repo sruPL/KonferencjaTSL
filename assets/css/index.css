@@ -1052,3 +1052,7 @@
             letter-spacing: 0.02em;
             margin-bottom: 0;
         }
+
+        /* Godziny: mocniejsze i wyśrodkowane w pionie (desktop) */
+        .schedule-item .time { font-weight: 700; align-self: center; }
+        @media (max-width: 768px) { .schedule-item .time { align-self: flex-start; } }
