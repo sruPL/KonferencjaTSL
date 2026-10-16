@@ -738,12 +738,6 @@
         .footer-nav-links a:hover {
             padding-left: 0;
         }
-        .footer-nav-links .footer-signup {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-top: 4px;
-        }
-
         .footer-nav-links a.footer-signup-link {
             color: var(--accent);
             font-weight: 700;
