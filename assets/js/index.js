@@ -1,6 +1,8 @@
 // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('navMenu').classList.toggle('show');
+            const open = document.getElementById('navMenu').classList.toggle('show');
+            this.setAttribute('aria-expanded', open ? 'true' : 'false');
+            this.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
         });
 
         function scrollToSection(targetElement) {
@@ -30,6 +32,8 @@
                 // Close mobile menu if open
                 if (document.getElementById('navMenu').classList.contains('show')) {
                     document.getElementById('navMenu').classList.remove('show');
+                    document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+                    document.querySelector('.mobile-menu-btn').setAttribute('aria-label', 'Otwórz menu');
                 }
             });
         });

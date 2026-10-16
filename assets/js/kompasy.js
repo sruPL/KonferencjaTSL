@@ -1,5 +1,7 @@
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('navMenu').classList.toggle('show');
+            const open = document.getElementById('navMenu').classList.toggle('show');
+            this.setAttribute('aria-expanded', open ? 'true' : 'false');
+            this.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
         });
 
 document.addEventListener("DOMContentLoaded", function () {
