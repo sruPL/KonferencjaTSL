@@ -1042,3 +1042,13 @@
                 margin-bottom: 0.9rem !important;
             }
         }
+
+        /* Program section: compact heading + larger parallel-sessions label */
+        #program .section-title { margin-bottom: 12px; }
+        #program .section-title h2 { padding-bottom: 0; }
+        #program .section-title h2::after { display: none; }
+        .schedule-block-label.schedule-block-label-lg {
+            font-size: 1.3rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+        }
