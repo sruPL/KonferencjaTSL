@@ -1052,3 +1052,30 @@
             letter-spacing: 0.02em;
             margin-bottom: 0;
         }
+
+        /* Godziny: pogrubione, na desktopie w jednej linii z tytułem (h3) pozycji */
+        .schedule-item .time { font-weight: 700; align-self: flex-start; margin-top: 2px; }
+        /* pozycje z etykietą nad tytułem: przesunięcie o wysokość etykiety (0.85rem × 1.6 + 4px) */
+        .schedule-item:has(.event-details > .schedule-block-label) .time { margin-top: calc(0.85rem * 1.6 + 4px + 2px); }
+        /* przerwy: tytuł mniejszy (1.05rem), godzina wyśrodkowana pionowo względem niego */
+        .schedule-item.schedule-break .time { margin-top: calc((1.05rem * 1.6 - 1.1rem * 1.6) / 2); }
+        /* kolumna godzin wyrównana do półpauzy; pojedyncza godzina w pozycji początku */
+        .time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .time .t-start { display: inline-block; width: 2.6em; text-align: right; }
+        .time .t-dash { display: inline-block; width: 0.7em; text-align: center; }
+        /* pojedyncza godzina wyśrodkowana na linii półpauz: szerokość = 2 × (2.6em + 0.35em) */
+        .time .t-start:only-child { width: 5.9em; text-align: center; }
+        /* większy odstęp od treści: kolumna przesunięta w lewo, tekst bez zmian */
+        .schedule-item > .time, .schedule-block-timed > .time { margin-left: -8px; min-width: 128px; }
+        /* blok "Sesje równoległe" z godziną w kolumnie czasu */
+        .schedule-block-timed { display: flex; align-items: center; padding-left: 21px; }
+        .schedule-block-timed .time { font-weight: 700; flex: 0 0 auto; }
+        @media (max-width: 768px) {
+            .time .t-start, .time .t-dash, .time .t-start:only-child { display: inline; width: auto; }
+            .schedule-item > .time, .schedule-block-timed > .time { margin-left: 0; min-width: 0; }
+            .schedule-block-timed { flex-direction: column; align-items: flex-start; padding-left: 25px; }
+            .schedule-block-timed .time { margin-bottom: 6px; }
+            .schedule-item.schedule-break .time,
+            .schedule-item .time,
+            .schedule-item:has(.event-details > .schedule-block-label) .time { align-self: flex-start; margin-top: 0; }
+        }
