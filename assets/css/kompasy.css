@@ -2,6 +2,8 @@
             --primary: #005b96;
             --secondary: #00a1e0;
             --accent: #ff6b35;
+            --accent-light-bg: #e25f2f; /* pomarańcz na jasnym tle (świadomy wybór wizualny; biały tekst 3,55:1) */
+            --accent-light-bg-hover: #ce5024;
             --light: #f8f9fa;
             --dark: #212529;
             --gray: #6c757d;
@@ -55,7 +57,7 @@
         }
 
         .logo-text span {
-            color: var(--accent);
+            color: var(--accent-light-bg);
         }
 
         nav ul {
@@ -80,11 +82,11 @@
         }
 
         nav a:hover {
-            color: var(--accent);
+            color: var(--accent-light-bg);
         }
 
         nav a.active {
-            color: var(--accent);
+            color: var(--accent-light-bg);
             font-weight: 600;
         }
 
@@ -95,7 +97,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
+            background: var(--accent-light-bg);
             transition: width 0.3s ease;
         }
 
@@ -105,16 +107,16 @@
         }
 
         nav a.nav-cta {
-            background: var(--accent);
+            background: var(--accent-light-bg);
             color: white;
             padding: 8px 12px;
             border-radius: 50px;
             font-weight: 700;
-            box-shadow: 0 4px 14px rgba(255,107,53,0.22);
+            box-shadow: 0 4px 14px rgba(226,95,47,0.22);
         }
 
         nav a.nav-cta:hover {
-            background: #e85a28;
+            background: var(--accent-light-bg-hover);
             color: white;
         }
 
@@ -228,7 +230,7 @@
 
         .btn {
             display: inline-block;
-            background: var(--accent);
+            background: var(--accent-light-bg);
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
@@ -239,7 +241,7 @@
         }
 
         .btn:hover {
-            background: #e85a28;
+            background: var(--accent-light-bg-hover);
         }
 
         .section {
