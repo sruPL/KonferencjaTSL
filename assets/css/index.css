@@ -222,6 +222,10 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
+            background: var(--accent-light-bg);
+        }
+
+        .contact-section .section-title h2::after {
             background: var(--accent);
         }
 
@@ -359,7 +363,7 @@
 
         .schedule-block {
             background: rgba(0,91,150,0.06);
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid var(--accent-light-bg);
             border-bottom: 1px solid #eee;
             padding: 18px 25px;
         }
