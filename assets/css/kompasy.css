@@ -151,6 +151,40 @@
             color: var(--primary);
         }
 
+        /* Menu rozwijane także na tabletach i mniejszych laptopach – poniżej 1150 px menu nie mieści się w jednej linii */
+        @media (max-width: 1149px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1149px) {
+            .mobile-menu-btn {
+                margin-left: auto;
+            }
+        }
+
         /* Hero section z obrazem z root repo */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -398,6 +432,21 @@
 
         .footer-nav-links a:hover {
             padding-left: 0;
+        }
+
+        .footer-nav-links a.footer-signup-link {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .footer-nav-links a.footer-signup-link:hover {
+            color: #e85a28;
+            padding-left: 0;
+        }
+
+        /* „Zapisz się!” w stopce: wyśrodkowane pod siatką linków, niezależnie od ich liczby */
+        .footer-nav-links li.footer-signup {
+            grid-column: 1 / -1;
         }
 
         .copyright {

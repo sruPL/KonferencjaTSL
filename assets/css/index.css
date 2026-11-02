@@ -152,6 +152,40 @@
             color: var(--primary);
         }
 
+        /* Menu rozwijane także na tabletach i mniejszych laptopach – poniżej 1150 px menu nie mieści się w jednej linii */
+        @media (max-width: 1149px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1149px) {
+            .mobile-menu-btn {
+                margin-left: auto;
+            }
+        }
+
         /* Hero section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -754,6 +788,11 @@
             padding-left: 0;
         }
 
+        /* „Zapisz się!” w stopce: wyśrodkowane pod siatką linków, niezależnie od ich liczby */
+        .footer-nav-links li.footer-signup {
+            grid-column: 1 / -1;
+        }
+
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -1085,4 +1124,16 @@
             .schedule-item .time,
             .schedule-item:has(.event-details > .schedule-block-label) .time { align-self: flex-start; margin-top: 0; }
             .event-details > .schedule-block-label { font-size: 0.88rem; letter-spacing: 0.03em; }
+        }
+
+        .event-details a.schedule-link {
+            color: var(--accent-light-bg);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .event-details a.schedule-link:hover,
+        .event-details a.schedule-link:focus-visible {
+            color: var(--accent-light-bg-hover);
         }
