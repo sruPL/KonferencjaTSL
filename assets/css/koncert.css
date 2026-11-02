@@ -307,3 +307,10 @@
             font-weight: 400;
             white-space: nowrap;
         }
+
+        /* Dłuższy tytuł „KONCERT KAMERALNY” – na najwęższych ekranach odrobinę mniejsza czcionka, by zmieścić się w jednej linii */
+        @media (max-width: 389px) {
+            .koncert-page .hero-highlight h1 {
+                font-size: clamp(1.05rem, 5.3vw, 1.4rem);
+            }
+        }
