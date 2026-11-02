@@ -82,6 +82,11 @@
             object-position: center 25%;
             user-select: none;
             -webkit-user-drag: none;
+            cursor: zoom-in;
+        }
+
+        .carousel-track.is-dragging .carousel-slide img {
+            cursor: grabbing;
         }
 
         .carousel-btn {
@@ -312,5 +317,136 @@
         @media (max-width: 389px) {
             .koncert-page .hero-highlight h1 {
                 font-size: clamp(1.05rem, 5.3vw, 1.4rem);
+            }
+        }
+
+        /* Powiększenie zdjęcia (lightbox) */
+        html.lightbox-open,
+        html.lightbox-open body {
+            overflow: hidden;
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: none;
+        }
+
+        .lightbox[hidden] {
+            display: none;
+        }
+
+        .lightbox-figure {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 56px 72px;
+        }
+
+        .lightbox-img {
+            display: block;
+            max-width: min(90vw, 100%);
+            max-height: min(90vh, 100%);
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            background: rgba(0,0,0,0.45);
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        .lightbox-btn {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.14);
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        @media (hover: hover) {
+            .lightbox-btn:not(:disabled):hover {
+                background: var(--accent);
+            }
+        }
+
+        .lightbox-btn:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .lightbox-btn:disabled {
+            opacity: 0.3;
+            cursor: default;
+            background: rgba(255,255,255,0.14);
+        }
+
+        .lightbox-close {
+            top: 12px;
+            right: 12px;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-prev {
+            left: 12px;
+        }
+
+        .lightbox-next {
+            right: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-figure {
+                padding: 64px 8px;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                top: auto;
+                bottom: 12px;
+                transform: none;
+            }
+
+            .lightbox-prev {
+                left: calc(50% - 60px);
+            }
+
+            .lightbox-next {
+                right: calc(50% - 60px);
             }
         }
