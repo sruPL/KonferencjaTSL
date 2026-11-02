@@ -30,7 +30,7 @@
         .koncert-grid {
             display: grid;
             grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
-            gap: 48px;
+            gap: 56px;
             align-items: start;
         }
 
@@ -166,24 +166,24 @@
             transform: scale(1.2);
         }
 
-        /* Informacje o wykonawcach */
-        .koncert-info h2,
-        .bio-card h2 {
+        /* Informacje o wykonawcach i biogram */
+        .koncert-info h2 {
             font-size: 2.2rem;
-            color: var(--primary);
+            color: var(--accent-light-bg);
             line-height: 1.2;
         }
 
         .koncert-subtitle {
-            color: var(--gray);
-            font-size: 1.1rem;
-            margin: 4px 0 24px;
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 4px 0 20px;
         }
 
         .koncert-info h3 {
             color: var(--primary);
             font-size: 1.25rem;
-            margin: 24px 0 12px;
+            margin: 0 0 12px;
             padding-bottom: 8px;
             position: relative;
         }
@@ -193,13 +193,12 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 60px;
+            width: 50px;
             height: 3px;
             background: var(--accent-light-bg);
         }
 
-        .performers,
-        .stage-list {
+        .performers {
             list-style: none;
         }
 
@@ -207,7 +206,7 @@
             display: flex;
             gap: 12px;
             align-items: baseline;
-            padding: 8px 0;
+            padding: 6px 0;
             font-size: 1.05rem;
         }
 
@@ -218,35 +217,13 @@
             flex-shrink: 0;
         }
 
-        .stage-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 8px 24px;
-        }
-
-        .stage-list li {
-            position: relative;
-            padding-left: 20px;
-            font-size: 1.05rem;
-        }
-
-        .stage-list li::before {
-            content: '';
-            position: absolute;
-            left: 2px;
-            top: 0.62em;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent-light-bg);
-        }
-
         .bio-card {
             background: white;
             border-radius: 8px;
             border: 1px solid rgba(226,95,47,0.32);
             box-shadow: 0 8px 22px rgba(0,0,0,0.08), 0 0 24px rgba(226,95,47,0.14);
-            padding: 30px;
+            padding: 26px 30px 14px;
+            margin-top: 28px;
             position: relative;
             overflow: hidden;
         }
@@ -261,23 +238,13 @@
             background: linear-gradient(90deg, var(--accent-light-bg), #ffc15a);
         }
 
-        .bio-card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-        }
-
         .bio-card p {
-            font-size: 1.05rem;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             text-align: justify;
             text-align-last: left;
         }
 
-        .bio-card .card-footer {
-            margin-top: 12px;
-        }
-
-        .koncert-bio {
+        .koncert-section {
             padding-bottom: 56px;
         }
 
@@ -303,7 +270,7 @@
             }
 
             .bio-card {
-                padding: 24px 18px;
+                padding: 22px 18px 10px;
             }
 
             .bio-card p {
@@ -328,4 +295,11 @@
             .carousel-track {
                 transition: none;
             }
+        }
+
+        .koncert-info h2 .pronunciation {
+            color: var(--gray);
+            font-size: 0.95rem;
+            font-weight: 400;
+            white-space: nowrap;
         }
