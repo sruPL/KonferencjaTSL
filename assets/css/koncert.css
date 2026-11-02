@@ -30,7 +30,7 @@
         .koncert-grid {
             display: grid;
             grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
-            gap: 56px;
+            gap: 44px;
             align-items: start;
         }
 
@@ -261,6 +261,10 @@
         }
 
         @media (max-width: 768px) {
+            .br-desktop {
+                display: none;
+            }
+
             .koncert-page .hero {
                 padding: 28px 0;
             }
