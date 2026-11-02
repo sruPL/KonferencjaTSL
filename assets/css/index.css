@@ -125,7 +125,7 @@
             display: none;
         }
 
-        @media (min-width: 1300px) {
+        @media (max-width: 1320px) and (min-width: 769px) {
             .logo-text {
                 font-size: 1.2rem;
             }
@@ -152,8 +152,8 @@
             color: var(--primary);
         }
 
-        /* Menu rozwijane także na tabletach i mniejszych laptopach – 8 pozycji nie mieści się w jednej linii */
-        @media (max-width: 1299px) {
+        /* Menu rozwijane także na tabletach i mniejszych laptopach – poniżej 1150 px menu nie mieści się w jednej linii */
+        @media (max-width: 1149px) {
             .mobile-menu-btn {
                 display: block;
             }
@@ -180,7 +180,7 @@
             }
         }
 
-        @media (min-width: 769px) and (max-width: 1299px) {
+        @media (min-width: 769px) and (max-width: 1149px) {
             .mobile-menu-btn {
                 margin-left: auto;
             }
@@ -786,6 +786,11 @@
         .footer-nav-links a.footer-signup-link:hover {
             color: #e85a28;
             padding-left: 0;
+        }
+
+        /* „Zapisz się!” w stopce: wyśrodkowane pod siatką linków, niezależnie od ich liczby */
+        .footer-nav-links li.footer-signup {
+            grid-column: 1 / -1;
         }
 
         .copyright {
