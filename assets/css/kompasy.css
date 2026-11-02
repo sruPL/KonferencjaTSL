@@ -124,7 +124,7 @@
             display: none;
         }
 
-        @media (max-width: 1320px) and (min-width: 769px) {
+        @media (min-width: 1300px) {
             .logo-text {
                 font-size: 1.2rem;
             }
@@ -149,6 +149,40 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--primary);
+        }
+
+        /* Menu rozwijane także na tabletach i mniejszych laptopach – 8 pozycji nie mieści się w jednej linii */
+        @media (max-width: 1299px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1299px) {
+            .mobile-menu-btn {
+                margin-left: auto;
+            }
         }
 
         /* Hero section z obrazem z root repo */
