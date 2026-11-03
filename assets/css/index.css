@@ -1137,3 +1137,16 @@
         .event-details a.schedule-link:focus-visible {
             color: var(--accent-light-bg-hover);
         }
+
+        /* Łamanie linii tylko na telefonach (≤768px) – symetrycznie do .desktop-only-br */
+        @media (min-width: 769px) {
+            .br-mobile { display: none; }
+        }
+
+        /* Hero: na telefonie ikona + data w 1. linii, uczelnia w 2. linii, bez separatora „|” */
+        @media (max-width: 768px) {
+            .hero-dates { row-gap: 2px !important; text-align: center; }
+            .hero-dates-text { display: contents; }
+            .hero-dates-sep { display: none; }
+            .hero-dates-place { flex-basis: 100%; }
+        }
